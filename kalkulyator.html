@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор стоимости — IZODOM</title>
+  <meta name="description" content="Рассчитайте ориентировочную стоимость строительства дома по технологии IZODOM.">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumbs"><a href="index.html">IZODOM</a> / <span data-i18n="nav.calc"></span></div>
+        <h1 data-i18n="calc.title"></h1>
+        <p class="lead" data-i18n="calc.subtitle"></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="calc" data-calc>
+          <div class="calc-form">
+            <div class="field">
+              <label><span data-i18n="calc.area"></span>: <span class="range-val" data-area-val>120 м²</span></label>
+              <input type="range" min="50" max="400" step="5" value="120" data-area>
+            </div>
+            <div class="field">
+              <label data-i18n="calc.floors"></label>
+              <div class="seg" data-seg="floors">
+                <button class="active" data-val="1" data-i18n="calc.floor1"></button>
+                <button data-val="2" data-i18n="calc.floor2"></button>
+                <button data-val="3" data-i18n="calc.floorM"></button>
+              </div>
+            </div>
+            <div class="field">
+              <label data-i18n="calc.type"></label>
+              <div class="seg" data-seg="type">
+                <button class="active" data-val="1" data-i18n="calc.typeEco"></button>
+                <button data-val="2" data-i18n="calc.typePassive"></button>
+              </div>
+            </div>
+            <div class="field">
+              <label data-i18n="calc.finish"></label>
+              <div class="seg" data-seg="finish">
+                <button class="active" data-val="1" data-i18n="calc.finishBase"></button>
+                <button data-val="2" data-i18n="calc.finishStd"></button>
+                <button data-val="3" data-i18n="calc.finishPrem"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-result">
+            <h3 data-i18n="calc.resultTitle"></h3>
+            <div class="calc-row"><span data-i18n="calc.rowMaterials"></span><b data-r-materials></b></div>
+            <div class="calc-row"><span data-i18n="calc.rowWork"></span><b data-r-work></b></div>
+            <div class="calc-row"><span data-i18n="calc.rowFinish"></span><b data-r-finish></b></div>
+            <div class="calc-row"><span data-i18n="calc.total"></span><span class="calc-total" data-r-total></span></div>
+            <p class="calc-note" data-i18n="calc.note"></p>
+            <a href="kontakty.html" class="btn btn--primary" style="width:100%;justify-content:center;margin-top:8px" data-i18n="calc.cta"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
