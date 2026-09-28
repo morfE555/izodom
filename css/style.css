@@ -87,10 +87,10 @@ p { margin: 0 0 1rem; }
 .logo--light .logo-text b { color: #fff; }
 .logo--light .logo-text i { color: var(--green); }
 
-.main-nav { display: flex; align-items: center; gap: 6px; }
+.main-nav { display: flex; align-items: center; gap: 4px; flex: 1 1 auto; justify-content: center; }
 .main-nav a {
-  padding: 8px 12px; font-size: .95rem; font-weight: 500; border-radius: 8px; color: var(--ink);
-  transition: .15s;
+  padding: 8px 11px; font-size: .93rem; font-weight: 500; border-radius: 8px; color: var(--ink);
+  transition: .15s; white-space: nowrap;
 }
 .main-nav a:hover { color: var(--green); }
 .main-nav a.active { color: var(--green); }
@@ -351,7 +351,7 @@ textarea { min-height: 130px; resize: vertical; }
 @media (max-width: 1024px) {
   .main-nav {
     position: fixed; inset: var(--header-h) 0 auto 0; background: #fff; flex-direction: column;
-    align-items: stretch; padding: 12px; border-bottom: 1px solid var(--line); box-shadow: var(--shadow);
+    align-items: stretch; justify-content: flex-start; flex: none; padding: 12px; border-bottom: 1px solid var(--line); box-shadow: var(--shadow);
     transform: translateY(-120%); transition: .3s; gap: 2px; max-height: calc(100vh - var(--header-h)); overflow:auto;
   }
   .main-nav.open { transform: none; }
