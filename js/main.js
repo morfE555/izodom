@@ -52,6 +52,7 @@
     clock: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>`,
     fb: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-3H13V9c0-1 .3-1.5 1.6-1.5H17V4.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1V11H8v3h2.6v8H13Z"/></svg>`,
     ig: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>`,
+    wa: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.3a8.3 8.3 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.3 8.3 0 1 1 12 20.3Zm4.6-6.2c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.8 6.8 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4l-.8-2c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.3.3-1 1-1 2.3s1 2.6 1.1 2.8c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.7.1.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/></svg>`,
     yt: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.5A2.5 2.5 0 0 0 2.4 7.3C2 8.8 2 12 2 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C5.7 19 12 19 12 19s6.3 0 7.8-.5a2.5 2.5 0 0 0 1.8-1.8C22 15.2 22 12 22 12Zm-12 3V9l5 3-5 3Z"/></svg>`,
     tt: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.2 1.6 3.7 3.8 3.9v2.6c-1.4.1-2.7-.3-3.8-1v5.7A5.2 5.2 0 1 1 10.8 9v2.7a2.5 2.5 0 1 0 2.6 2.5V3H16Z"/></svg>`,
     sound: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9v6h4l5 4V5L8 9H4Z" stroke-linejoin="round"/><path d="M17 8a5 5 0 0 1 0 8M19.5 5.5a8.5 8.5 0 0 1 0 13" stroke-linecap="round"/></svg>`,
@@ -81,8 +82,14 @@
     { key: "nav.contacts", href: "kontakty.html" }
   ];
 
-  // Контакты Кыргызстана — ЗАМЕНИТЕ на реальные данные партнёра
-  const CONTACT = { phone: "+996 700 000 000", phoneHref: "tel:+996700000000", email: "info@izodom.kg" };
+  // Контакты Кыргызстана
+  const CONTACT = {
+    phone: "+996 224 898 999",
+    phoneHref: "tel:+996224898999",
+    email: "izodomkg@gmail.com",
+    whatsapp: "https://wa.me/996224898999",
+    instagram: "https://www.instagram.com/izodom.kg/"
+  };
 
   /* ---------- Язык ---------- */
   function getLang() {
@@ -182,10 +189,8 @@
             ${logoHTML("light")}
             <p data-i18n="footer.about">${t("footer.about")}</p>
             <div class="footer-social">
-              <a href="#" aria-label="Facebook">${ICONS.fb}</a>
-              <a href="#" aria-label="Instagram">${ICONS.ig}</a>
-              <a href="#" aria-label="YouTube">${ICONS.yt}</a>
-              <a href="#" aria-label="TikTok">${ICONS.tt}</a>
+              <a href="${CONTACT.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${ICONS.ig}</a>
+              <a href="${CONTACT.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp">${ICONS.wa}</a>
             </div>
           </div>
           <div class="footer-col">
@@ -206,7 +211,9 @@
           <div class="footer-col footer-newsletter">
             <h4 data-i18n="footer.col.contacts">${t("footer.col.contacts")}</h4>
             <a href="${CONTACT.phoneHref}">${CONTACT.phone}</a>
+            <a href="${CONTACT.whatsapp}" target="_blank" rel="noopener">WhatsApp</a>
             <a href="mailto:${CONTACT.email}">${CONTACT.email}</a>
+            <a href="${CONTACT.instagram}" target="_blank" rel="noopener">Instagram @izodom.kg</a>
             <p style="margin-top:14px" data-i18n="footer.newsletter.text">${t("footer.newsletter.text")}</p>
             <form data-newsletter>
               <input type="email" required data-i18n-ph="footer.email.ph" placeholder="${t("footer.email.ph")}">
